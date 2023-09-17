@@ -12,6 +12,6 @@ console.log(String(num).length-1);
 //Experiment! What if num could be EITHER an integer or a decimal?  Add an if/else statement so your code can handle both cases.
 if (String(num).includes('.')){
     console.log(String(num).length-1);
-    } else {
+} else {
     console.log(String(num).length);
-    }
+}
