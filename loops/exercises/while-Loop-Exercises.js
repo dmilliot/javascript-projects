@@ -6,7 +6,7 @@ let numberOfAstronauts = 0;
 let altitude = 0;
 
 while (fuel <= 5000 || fuel > 30000 || isNaN(fuel)) {
-  fuel = input.question('Enter starting fuel level');
+  fuel = input.question('Enter starting fuel level');// Number(input.question())
 }
 while (numberOfAstronauts < 1 || numberOfAstronauts > 7 || isNaN(numberOfAstronauts)) {
   numberOfAstronauts = input.question('Enter the number of astronauts');

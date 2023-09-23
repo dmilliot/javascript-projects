@@ -15,7 +15,7 @@ let str = "LaunchCode";
 
 //2) Modify your code to accept user input. Query the user to enter the number of letters that will be relocated.
 let numberToSlice = input.question("How many letters should we relocate?");
-let slicedInput = str.slice(0,numberToSlice);
+ let slicedInput = str.slice(0,numberToSlice);
 console.log(slicedInput);
 let slicedInput2 = str.slice(numberToSlice);
 console.log(slicedInput);
