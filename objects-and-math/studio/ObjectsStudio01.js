@@ -2,7 +2,7 @@
 function selectRandomEntry(arr, num) {
   let chosenIDs = [];
   while (chosenIDs.length < num) {
-    let numberZerotoNum = (Math.round(Math.random()*arr.length));
+    let numberZerotoNum = (Math.floor(Math.random()*arr.length));
     if  (!chosenIDs.includes(arr[numberZerotoNum])) {
       chosenIDs.push(arr[numberZerotoNum]);
     } else {
@@ -14,10 +14,8 @@ function selectRandomEntry(arr, num) {
 function buildCrewArray(arr1, chosenCrew) {
   let crew = [];
   for (i=0; i<chosenCrew.length; i++) {
-    if (chosenCrew[i] === arr1[i].astronautID) {
-      crew.push(arr1[i].name);
-    } else {
-    }
+    let selectedCrewArray = arr1.filter(function(astro) {return chosenCrew[i] === astro.astronautID})
+    crew.push(selectedCrewArray[0].name);
   }
   return crew;
 }
@@ -69,13 +67,12 @@ let candidateF = {
 };
 
 let animals = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
+
 chosenCrew = selectRandomEntry(idNumbers, 3);
 crew = buildCrewArray(animals, chosenCrew);
-console.log(chosenCrew);
-console.log(crew);
 
 // Code your template literal and console.log statements:
-
+console.log(`${crew[0]}, ${crew[1]}, and ${crew[2]} are going to space. WOW!`);
 // function selectRandomID {
   
 // }
