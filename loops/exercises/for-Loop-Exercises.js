@@ -30,17 +30,17 @@ Initialize two variables to hold the string “LaunchCode” and the array [1, 5
 Construct ``for`` loops to accomplish the following tasks:
   a. Print each element of the array to a new line.
   b. Print each character of the string - in reverse order - to a new line. */ 
-//let string = "LaunchCode";
-//let array = [1, 5, 'LC101', 'blue', 42];
+let string = "LaunchCode";
+let array = [1, 5, 'LC101', 'blue', 42];
 
-//for (let i = 0; i < array.length; i++) {
-//  console.log(array[i]);
-//}
+for (let i = 0; i < array.length; i++) {
+  console.log(array[i]);
+}
 
-//let reversed = ""
-//for (let i = 0; i < string.length; i++) {
-//  reversed = string[i] + reversed;
-//}
+let reversed = ""
+for (let i = 0; i < string.length; i++) {
+  reversed = string[i] + reversed;
+}
 
 //console.log(reversed);
 
