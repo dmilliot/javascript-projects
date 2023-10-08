@@ -7,18 +7,18 @@ let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
 
 //Using one of the test arrays as the argument, call your function inside the console.log statement below.
 
-console.log(nums3.sort(function(a, b) {
-    console.log(a,b);
-    return b - a;
-  }));
+// console.log(nums3.sort(function(a, b) {
+//     console.log(a,b);
+//     return a - b;
+//   }));
 
-// function smallestNum(arr) {
-//     let minNum = arr[0];
-//     for (i=0; i<arr.length; i++) {
-//         if (arr[i]< minNum) {
-//             minNum = arr[i];
-//         }
-//     }
-//     return minNum;
-// }
-// console.log(smallestNum(nums3));
+function smallestNum(arr) {
+    let minNum = arr[0];
+    for (i=0; i<arr.length; i++) {
+        if (arr[i]< minNum) {
+            minNum = arr[i];
+        }
+    }
+    return minNum;
+}
+console.log(smallestNum(nums3));
