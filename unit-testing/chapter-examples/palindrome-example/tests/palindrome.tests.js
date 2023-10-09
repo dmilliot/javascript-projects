@@ -1,10 +1,17 @@
 const isPalindrome = require('../palindrome.js');
 
-describe('isPalindrome', function() {
+describe('testing isPalindrome', function() {
+
     test('should return true for a single letter', function() {
         expect(isPalindrome('a')).toBe(true);
     });
     test('should return true for a single letter repeated', function() {
-        expect(isPalinfrome('aaa')).toBe(true);
+        expect(isPalindrome('aaa')).toBe(true);
+    });
+    test('should return true for a somple palindrome', function() {
+        expect(isPalindrome('aba')).toBe(true);
+    });
+    test('should return true for a longer palindrome', function() {
+        expect(isPalindrome('racecar')).toBe(true);
     });
 });
