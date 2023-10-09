@@ -10,4 +10,8 @@ describe('whoWon', function() {
         let output = rps.whoWon('rock', 'paper');
         expect(output).toBe("Player 2 wins!");
     });
+    test("should return 'Player 2 wins!' if player = paper & player 2 = scissors", function() {
+        let output = rps.whoWon('paper', 'scissors');
+        expect(output).toBe("Player 2 wins");
+    })
 })
