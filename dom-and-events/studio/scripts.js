@@ -49,17 +49,17 @@ window.addEventListener('load', function() {
     rocket.style.right = "0px";
 
     upButton.addEventListener("click", function() {
-       rocket.style.top = parseInt(rocket.style.top)-10 + "px";
+       rocket.style.top = Math.max(parseInt(rocket.style.top)-10, 0) + "px"
        shuttleHeight.innerHTML = Number(shuttleHeight.innerHTML) + 10000;
     });
     downButton.addEventListener("click", function(){
-        rocket.style.top = parseInt(rocket.style.top)+10 + "px";
+        rocket.style.top = Math.min(parseInt(rocket.style.top)+10, shuttleBackground.offsetHeight - rocket.offsetHeight) + "px";
         shuttleHeight.innerHTML = Number(shuttleHeight.innerHTML) - 10000;
     });
     leftButton.addEventListener("click", function() {
-        rocket.style.left = parseInt(rocket.style.left)-10 + "px";
+        rocket.style.left = Math.max(parseInt(rocket.style.left)-10, 0) + "px";
     });
     rightButton.addEventListener("click", function() {
-        rocket.style.left = parseInt(rocket.style.left)+10 + "px";
+        rocket.style.left = Math.min(parseInt(rocket.style.left)+10, shuttleBackground.offsetWidth - rocket.offsetHeight) + "px";
     })
 });
